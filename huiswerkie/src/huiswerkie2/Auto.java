@@ -37,8 +37,5 @@ public class Auto {
     public String toString(){
         return merk + " " + type + " " + "(" + pk + ")"; 
     }
-	
-	public boolean isMemes() {
-		return true;
-	}
+    
 }
