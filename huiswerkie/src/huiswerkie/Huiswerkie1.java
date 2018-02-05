@@ -5,6 +5,7 @@ package huiswerkie;
 public class Huiswerkie1 {
 
     public static void main(String[] args) {
+        //deeeeeeeeeeez nuts
         //opdracht 4a
         System.out.println("Opdracht 4a");
         String groet = new String("hallo");
