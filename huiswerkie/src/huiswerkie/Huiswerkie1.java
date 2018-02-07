@@ -25,12 +25,16 @@ public class Huiswerkie1 {
         }else{
             System.out.println(naam2 + " is een langere naam dan " + naam1);
         }
+        
+        
         //opdracht 5a
         System.out.println("opdracht 5a");
         String tekst = "aa";
         System.out.println(tekst);
         System.out.println(tekst + tekst);
         System.out.println(tekst + tekst + tekst + tekst);
+        
+        
         //opdracht 5b
         System.out.println("opdracht 5b");
         System.out.println(tekst + tekst.length());

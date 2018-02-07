@@ -19,6 +19,23 @@ public class AutoTest {
         Auto2.setPk(400);
         
         System.out.println(Auto2);
+        
+        Auto1.voerOp(Auto2.pk-Auto1.pk);
+        
+        Auto1.setPk(60); // Skoda weer terug naar af
+        
+        int maxOpvoerPks;
+        while(Auto1.pk+Auto1.berekenOpvoerMogelijkheid() < Auto2.pk){
+            if(Auto1.isOpgevoerd()) {
+                System.out.println("STOPPEN MAAR");
+                break;
+            } else {
+                Auto1.voerOp(Auto1.berekenOpvoerMogelijkheid());
+            }
+        }
+        
+        Auto1.voerOp(Auto2.pk-Auto1.pk);
+
 
     }
 }
