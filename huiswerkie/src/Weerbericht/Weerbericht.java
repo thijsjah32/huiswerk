@@ -1,6 +1,9 @@
 
 package Weerbericht;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Weerbericht {
     
     private double temperatuur;
@@ -9,6 +12,9 @@ public class Weerbericht {
     private boolean bewolking;
     private boolean neerslag;
     private boolean zon;
+    private LocalDate datum;
+    private DateTimeFormatter datumFormat;
+
     
     public Weerbericht(double temperatuur, int windkracht, String windrichting, boolean bewolking, boolean neerslag, boolean zon){
         this.temperatuur = temperatuur;
@@ -17,6 +23,9 @@ public class Weerbericht {
         setBewolking(bewolking);
         setNeerslag(neerslag);
         setZon(zon);
+        datum = LocalDate.now(); // vandaag
+        datumFormat = DateTimeFormatter.ofPattern("eeee"); // alleen de dag
+
     }
     
     public Weerbericht(double temperatuur, int windkracht, String windrichting){
@@ -25,7 +34,7 @@ public class Weerbericht {
     }
     
     public String toString(){
-        String totaleWeerbericht = "Weerbericht-temperatuur: " + temperatuur + ", wind: " + windkracht + " " + windrichting;
+        String totaleWeerbericht = "Weerbericht-temperatuur " + getDagVanDeWeek() + ": "  + temperatuur + ", wind: " + windkracht + " " + windrichting;
         
         if(bewolking) {
             totaleWeerbericht += ", Bewolked";
@@ -41,6 +50,12 @@ public class Weerbericht {
         
         return totaleWeerbericht;
     }
+    
+    public String getDagVanDeWeek() {
+        String deDag = datum;
+        return deDag;
+    }
+
     
     
 
