@@ -23,13 +23,12 @@ public class Weerbericht {
         setBewolking(bewolking);
         setNeerslag(neerslag);
         setZon(zon);
-        datum = LocalDate.now(); // vandaag
-        datumFormat = DateTimeFormatter.ofPattern("eeee"); // alleen de dag
-
+        datum = LocalDate.now(); // vandaag  
     }
     
     public Weerbericht(double temperatuur, int windkracht, String windrichting){
         this(temperatuur, windkracht, windrichting, false, false, false);
+        datum = LocalDate.now();
         
     }
     
@@ -52,8 +51,10 @@ public class Weerbericht {
     }
     
     public String getDagVanDeWeek() {
-        String deDag = datum;
-        return deDag;
+        
+        datumFormat = DateTimeFormatter.ofPattern("eeee"); 
+         
+        return datum.format(datumFormat);
     }
 
     

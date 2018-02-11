@@ -33,8 +33,8 @@ public class Hemellichaam {
     
     public void printTemperatuur(){
         if (tempMin != tempMax){
-        System.out.println("het is minimaal " + tempMin + " graden, en maximaal " + tempMax + " graden");
-    } else {
+            System.out.println("het is minimaal " + tempMin + " graden, en maximaal " + tempMax + " graden");
+        } else {
             System.out.println("de temperatuur is onegeveer (" + tempMin + ") graden");
         }
     }
