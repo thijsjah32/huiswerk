@@ -9,6 +9,7 @@ public class Gebruiker {
         this.naam = naam;
         this.leeftijd = leeftijd;
 }
+
     
     public String toString(){
         return naam + "(" + leeftijd + ")";
