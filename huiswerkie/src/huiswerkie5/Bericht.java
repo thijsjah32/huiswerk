@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class Bericht {
     private Gebruiker afzender;
     private String bericht;
-    private LocalDateTime datum;
+    public LocalDateTime datum;
     
     public Bericht(Gebruiker afzender, String bericht){
         this.afzender = afzender;
