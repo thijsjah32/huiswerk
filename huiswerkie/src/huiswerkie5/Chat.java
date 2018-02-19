@@ -31,6 +31,7 @@ public class Chat {
         
         
         
+<<<<<<< HEAD
     }
     
     public static void voegToe(Bericht bericht){
@@ -60,5 +61,30 @@ public class Chat {
         ArrayList<Bericht> berichtenVan = new ArrayList<>();
         
         return berichtenVan;
+=======
+    }
+    
+    public static void voegToe(Bericht bericht){
+        berichten.add(bericht);
+    }
+    
+    public static void printChat(){
+        String aantal ="Er zijn: " + berichten.size() + " berichten:";
+        System.out.println(aantal);
+        for(int i=0; i<berichten.size(); i++){
+            System.out.println(berichten.get(nummer));
+            nummer += 1;
+        }
+    }
+    
+    public void printBerichtenSinds(LocalDateTime datum){
+        this.datumCheck = datum;
+        for(int i=0; i<berichten.size(); i++){
+            if(datumCheck.isBefore(bericht.datum))
+            System.out.println(berichten.get(nummer));
+            nummer += 1;
+        }
+                 
+>>>>>>> d5ddbce144491b7d39de8bdba40d1e13c67f6fa2
     }
 }    
