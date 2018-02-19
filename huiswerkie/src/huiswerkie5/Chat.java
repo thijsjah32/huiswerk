@@ -55,4 +55,10 @@ public class Chat {
         }
                  
     }
+    
+    ArrayList<Bericht> ZoekBerichtenVan(Gebruiker gebruiker){
+        ArrayList<Bericht> berichtenVan = new ArrayList<>();
+        
+        return berichtenVan;
+    }
 }    
